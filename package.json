@@ -1,0 +1,32 @@
+{
+  "name": "combohtml",
+  "version": "0.0.1",
+  "description": "html build tool for assets and ssi etc process",
+  "main": "index.js",
+  "scripts": {
+    "test": "test index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dickeylth/combohtml.git"
+  },
+  "keywords": [
+    "build",
+    "html"
+  ],
+  "author": "弘树",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dickeylth/combohtml/issues"
+  },
+  "homepage": "https://github.com/dickeylth/combohtml",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "iconv-lite": "^0.4.3",
+    "is-utf8": "^0.2.0",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1"
+  }
+}

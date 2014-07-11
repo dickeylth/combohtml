@@ -1,0 +1,61 @@
+<!-- 引用的本地文件在构建时会被抽取和合并 -->
+<link href="styles/index.css" rel="stylesheet" />
+<div class="test">
+    <h4>Test</h4>
+</div>
+<section class="mod-daily-prom main-mod">
+
+    <header class="mod-title">
+        <h2>每日特惠</h2>
+        <script>
+            var x = 12;
+        </script>
+    </header>
+
+    <!-- #include virtual="../mods/abc.html" -->
+
+    <div class="mod-body">
+        <!--#def
+                {
+                    "promProductList": [
+                        {
+                            "imgSrc": "http://gw.alicdn.com/tps/i2/T1uGv3FOdXXXb3frHW-590-202.jpg_q75.jpg",
+                            "link": "http://triph5.m.taobao.com",
+                            "title": "每日特惠商品标题",
+                            "subTitle": "商品副标题",
+                            "price": 3500
+                        },
+                        {
+                            "imgSrc": "http://gw.alicdn.com/tps/i4/T1IVj4FJNXXXb3frHW-590-202.jpg_q75.jpg",
+                            "link": "http://triph5.m.taobao.com",
+                            "title": "7天6晚机票+酒店",
+                            "subTitle": "深圳-巴黎豪华自由行",
+                            "price": 4000
+                        }
+                    ],
+                    "tmsTitle": "每日特惠商品",
+                    "tmsGroup": "每日特惠"
+                }
+            -->
+        <ul class="prom-prod-list">
+            {@each promProductList as product}
+            <li>
+                <a class="prod-item" href="${product.link}">
+                    <img class="prod-image" src="${product.imgSrc}"/>
+                    <div class="prod-info">
+                        <div class="prod-title-container">
+                            <h4 class="prod-title">${product.title}</h4>
+                            <h4 class="prod-subtitle">${product.subTitle}</h4>
+                        </div>
+                        <div class="prod-price">
+                            <sup>&yen;</sup>
+                            <em class="prod-price-num">${product.price}</em>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {@/each}
+        </ul>
+    </div>
+
+</section>
